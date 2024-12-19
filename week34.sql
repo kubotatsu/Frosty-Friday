@@ -1,4 +1,5 @@
 -- startup
+-- 初期設定
 create database week_34_db;
 create schema ans1_schema;
 
@@ -27,7 +28,7 @@ select * from values
 
 
 -- answer no.1
---
+-- 再起With句を使って、自己参照しよう！ 1
 with recursive r as (
     select 
         to_array(code) as code_array,
@@ -64,7 +65,7 @@ where level = 1
 ;
 
 ----
----- 
+-- 再起With句を使って、自己参照しよう！ 2
 with recursive r as (
     select 
         to_array(code) as code_array,
@@ -100,7 +101,7 @@ where is_lowest_level = true
 
 
 -- answer no.2
--- connect by
+-- connect byを使ってみよう。
 
 with t as (
 select
